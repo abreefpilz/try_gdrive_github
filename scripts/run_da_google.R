@@ -4,7 +4,7 @@ if (!require("pacman")) install.packages("pacman")
 pacman::p_load(lubridate,tidyverse, googledrive, readxl, gsheet)
 
 
-source()
+source("https://raw.githubusercontent.com/abreefpilz/try_gdrive_github/refs/heads/main/scripts/download_google.R")
 
 download_google(
    directory = "data/",
