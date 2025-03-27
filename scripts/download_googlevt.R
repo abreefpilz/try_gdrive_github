@@ -29,7 +29,8 @@ download_googlevt<-function(directory,
     # authenticate Google Drive to download the files from the ACL folder.
     # Still figuring this out
     # googledrive::drive_auth(path = Sys.getenv('AGDRIVE'))
-    drive_auth(cache = Sys.getenv('GDRIVE_PAT'), email = 'abreefpilz@vt.edu')
+   # drive_auth(cache = Sys.getenv('GDRIVE_PAT'), email = 'abreefpilz@vt.edu')
+    googledrive::drive_auth(cache = '.secrets', email = 'abreefpilz@vt.edu')
     
     
     
