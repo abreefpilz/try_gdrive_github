@@ -96,9 +96,13 @@
     
     all$b <- all$y + all$z
     
+    print("Add columns")
+    
     ### 4. Save file ####
     
     write_csv(all, output_file)
+    
+    print("saved file")
     
   } 
     
