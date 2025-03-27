@@ -1,4 +1,4 @@
-name: GHG QAQC
+name: Try Google Drive
 on:
   pull_request:
     branches:
