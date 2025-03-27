@@ -18,6 +18,8 @@ jobs:
       - name: Install dependencies
         run: |
           Rscript -e "install.packages('googledrive')"
+          Rscript -e "install.packages('gargle')"
+          Rscript -e "install.packages('httr')"
 
       - name: Decrypt .secrets
         env:
