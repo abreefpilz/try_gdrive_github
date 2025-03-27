@@ -28,7 +28,8 @@
       
       # authenticate Google Drive to download the files from the ACL folder.
       # Still figuring this out
-      googledrive::drive_auth(path = Sys.getenv('GDRIVE_PAT'))
+      #googledrive::drive_auth(path = Sys.getenv('GDRIVE_PAT'))
+      googledrive::drive_auth(cache = '.secrets/', email = 'abreefpilz@gmail.com')
       
       
       
