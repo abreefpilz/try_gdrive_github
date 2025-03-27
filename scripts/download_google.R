@@ -28,7 +28,7 @@
       
       # authenticate Google Drive to download the files from the ACL folder.
       # Still figuring this out
-      #googledrive::drive_auth(path = Sys.getenv('NAME_OF_MY_SECRET'))
+      googledrive::drive_auth(path = Sys.getenv('AGDRIVE'))
       
       
       # Get the file info of the GHG spreadsheets from GoogleDrive
