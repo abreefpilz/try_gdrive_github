@@ -1,0 +1,41 @@
+name: Try Google Drive VT
+on:
+  pull_request:
+    branches:
+    - main
+    
+  workflow_dispatch:
+  schedule:
+  - cron: "0 5 * * *"
+  
+jobs:
+  try_google:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      GDRIVE_PAT: ${{ secrets.AVT_DRIVE }}
+    container:
+      image: rocker/tidyverse:4.2
+    steps:
+      - run: git config --system --add safe.directory '*'
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run automated target files
+        run: |
+          R -e 'remotes::install_version("pacman", version = "0.5.1")'
+          R -e 'utils::install.packages("RCurl")'
+          Rscript $GITHUB_WORKSPACE/scripts/run_da_googlevt.R
+
+      - name: Commit and Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git pull
+          git add data/file*
+          git add testvt_gdrive.csv
+          git commit -m "Updating Manual Files" || echo "No changes to commit"
+          git push https://${GITHUB_PAT}:${GITHUB_PAT}@github.com/${GITHUB_REPOSITORY}
