@@ -10,5 +10,5 @@ download_google(
   directory = "datavt/",
   gdrive = T, # Are the files on Google Drive. True or False
   gshared_drive = as_id("1JsoCQMDUQH5xgkcGzmBG6O1uWJpmbKSm"),
-  output_file = "test_gdrivevt.csv"
+  output_file = "testvt_gdrive.csv"
 )
