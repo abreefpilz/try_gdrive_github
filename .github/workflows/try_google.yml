@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-     # GDRIVE_PAT: ${{ secrets.AGDRIVE }}
-      GDRIVE_PAT: ${{ secrets.AVT_DRIVE }}
+      GDRIVE_PAT: ${{ secrets.AGDRIVE }}
+     # GDRIVE_PAT: ${{ secrets.AVT_DRIVE }}
        
     container:
       image: rocker/tidyverse:4.2
