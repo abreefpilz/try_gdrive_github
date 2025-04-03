@@ -9,7 +9,7 @@ source("https://raw.githubusercontent.com/abreefpilz/try_gdrive_github/main/scri
 download_google(
    directory = "data/",
    gdrive = T, # Are the files on Google Drive. True or False
-   gshared_drive = as_id("1k7ni3oq0n4NRJTw_AvtJ8Htm59oY9c8g"),
+   gshared_drive = as_id("1-xq6i62PUV4IR3Eb0SHq2NUJ6ar7-rhz"),
    #gshared_drive = as_id("1e1EOr_dd3ZfAS5g4Wl_KutGQ-zjfkkNE"),
   output_file = "test_gdrive.csv"
 )
